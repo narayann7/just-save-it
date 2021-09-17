@@ -2,10 +2,10 @@ const { Composer } = require("micro-bot");
 const bot = new Composer();
 const controllers = require("../controllers/media_controller");
 
-bot.use((context, next) => {
-  console.log(context.message);
-  next(context);
-});
+// bot.use((context, next) => {
+//   console.log(context.message);
+//   next(context);
+// });
 
 bot.command("error", controllers.errorFun);
 bot.command("info", controllers.info);
