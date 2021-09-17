@@ -4,7 +4,7 @@ const reelDownloader = require("../models/reel_downloader");
 const basic_command = {
   async reelDownload(context) {
     try {
-      console.log(context.message.reply_to_message);
+  
   
         const result = await reelDownloader(
           context.message.reply_to_message.text
@@ -19,6 +19,9 @@ const basic_command = {
           context.message.reply_to_message.chat.id,
           link
         );
+
+
+        console.log(link);
       
     } catch (error) {
       if (context.message.reply_to_message == undefined)
