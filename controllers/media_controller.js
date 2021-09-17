@@ -5,16 +5,7 @@ const basic_command = {
   async reelDownload(context) {
     try {
       console.log(context.message.reply_to_message);
-      if (
-        context.message.text == "/download_reel" &&
-        context.message.reply_to_message.chat.id == undefined
-      )
-        context.telegram.sendMessage(
-          context.message.chat.id,
-          `only "/download_reel"  command will not work\nclick -> /video_tutorial for tutorial
-        `
-        );
-      else {
+  
         const result = await reelDownloader(
           context.message.reply_to_message.text
         );
@@ -28,7 +19,7 @@ const basic_command = {
           context.message.reply_to_message.chat.id,
           link
         );
-      }
+      
     } catch (error) {
       if (context.message.reply_to_message == undefined)
         context.telegram.sendMessage(
