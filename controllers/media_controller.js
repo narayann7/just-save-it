@@ -3,7 +3,7 @@ const reelDownloader = require("../models/reel_downloader");
 
 const basic_command = {
   async reelDownload(context) {
-    try {
+    // try {
   
   
         const result = await reelDownloader(
@@ -23,19 +23,19 @@ const basic_command = {
 
         console.log(link);
       
-    } catch (error) {
-      if (context.message.reply_to_message == undefined)
-        context.telegram.sendMessage(
-          context.message.chat.id,
-          `only "/download_reel"  command will not work\n\nclick -> /video_tutorial for tutorial
-         `
-        );
-      else
-        context.telegram.sendMessage(
-          context.message.reply_to_message.chat.id,
-          "Sorry , link may be invalid or something went wrong 😭 "
-        );
-    }
+    // } catch (error) {
+    //   if (context.message.reply_to_message == undefined)
+    //     context.telegram.sendMessage(
+    //       context.message.chat.id,
+    //       `only "/download_reel"  command will not work\n\nclick -> /video_tutorial for tutorial
+    //      `
+    //     );
+    //   else
+    //     context.telegram.sendMessage(
+    //       context.message.reply_to_message.chat.id,
+    //       "Sorry , link may be invalid or something went wrong 😭 "
+    //     );
+    // }
   },
   async videoTutorial(context) {
     context.telegram.sendVideo(
