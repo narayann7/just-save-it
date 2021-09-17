@@ -21,7 +21,8 @@ const basic_command = {
         );
 
 
-        console.log(link);
+        // console.log(link);
+        console.log(   context.message.reply_to_message.text);
       
     // } catch (error) {
     //   if (context.message.reply_to_message == undefined)
