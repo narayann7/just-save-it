@@ -55,7 +55,7 @@ if any thing went wrong the type
 /error "with error messsage" 
 and send
 
-Never settle and keep learning
+Never settle and keep learning!!
 
     `
     );
